@@ -70,9 +70,14 @@ The interactive device can be anything *except* a computer, a tablet computer or
 
 \*\***Describe your setting, players, activity and goals here.**\*\*
 
+The interactive device serves as an indicator of the storage condition for environment-senetive stuff like guitars and old books. When the temperature and humidity is on an appropriate level, the device shows color green, and when the condition is bad, it shows red. This device saves the trouble of manually checking the condition and provies a more straightforward alert.
+
 Sketch a storyboard of the interactions you are planning. It does not need to be perfect, but must get across the behavior of the interactive device and the other characters in the scene. 
 
 \*\***Include a picture of your storyboard here**\*\*
+
+![storyboard](https://user-images.githubusercontent.com/26131764/132265302-28b32252-57f9-4fb7-9c96-e73d926f4fa0.png)
+
 
 Present your idea to the other people in your breakout room. You can just get feedback from one another or you can work together on the other parts of the lab.
 
