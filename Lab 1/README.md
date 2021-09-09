@@ -30,25 +30,14 @@ Labs are due on Mondays. Make sure this page is linked to on your main class hub
 
 ## Part A. Plan 
 
-To stage the interaction with your interactive device, think about:
-
 _Setting:_ The interaction will happen inside the home, when the user is checking the storage condition (temperature and humidity) of the guitar.
 
 _Players:_ The owner of the guitar. (but also can include anyone who lives with the owner of the guitar)
 
-_Activity:_ The smart screen will 
+_Activity:_ The smart screen will show green if the storage condition is fine, and red if it needs adjustment.
 
 _Goals:_ Make sure that the guitar is well maintained.
 
-The interactive device can be anything *except* a computer, a tablet computer or a smart phone, but the main way it interacts needs to be using light.
-
-\*\***Describe your setting, players, activity and goals here.**\*\*
-
-The interactive device serves as an indicator of the storage condition for environment-senetive stuff like guitars and old books. When the temperature and humidity is on an appropriate level, the device shows color green, and when the condition is bad, it shows red. This device saves the trouble of manually checking the condition and provies a more straightforward alert.
-
-Sketch a storyboard of the interactions you are planning. It does not need to be perfect, but must get across the behavior of the interactive device and the other characters in the scene. 
-
-\*\***Include a picture of your storyboard here**\*\*
 
 ![storyboard](https://user-images.githubusercontent.com/26131764/132265302-28b32252-57f9-4fb7-9c96-e73d926f4fa0.png)
 
@@ -79,20 +68,16 @@ If you run into technical issues with this tool, you can also use a light switch
 
 \*\***Give us feedback on Tinkerbelle.**\*\*
 
-![image](https://user-images.githubusercontent.com/26131764/132356262-407492f4-f736-4061-9c4d-989d21cc4975.png)
-![image](https://user-images.githubusercontent.com/26131764/132356299-27dd46a6-1ad6-46b9-b021-815635fd16c2.png)
-![image](https://user-images.githubusercontent.com/26131764/132356370-51e588a7-1574-423d-9ac4-22f3aeefca42.png)
-![image](https://user-images.githubusercontent.com/26131764/132356413-81a7ab48-d405-4de2-80b1-e703209b374f.png)
 
-
+![image](https://user-images.githubusercontent.com/26131764/132356262-407492f4-f736-4061-9c4d-989d21cc4975.png) | ![image](https://user-images.githubusercontent.com/26131764/132356299-27dd46a6-1ad6-46b9-b021-815635fd16c2.png) 
+---------|----------
+ ![image](https://user-images.githubusercontent.com/26131764/132356370-51e588a7-1574-423d-9ac4-22f3aeefca42.png) | ![image](https://user-images.githubusercontent.com/26131764/132356413-81a7ab48-d405-4de2-80b1-e703209b374f.png) 
 
 
 ## Part D. Wizard the device
 Take a little time to set up the wizarding set-up that allows for someone to remotely control the device while someone acts with it. Hint: You can use Zoom to record videos, and you can pin someone’s video feed if that is the scene which you want to record. 
 
 \*\***Include your first attempts at recording the set-up video here.**\*\*
-
-The video is attached to the same directory of this readme file.
 
 Now, hange the goal within the same setting, and update the interaction with the paper prototype. 
 
@@ -112,11 +97,7 @@ Think about the setting of the device: is the environment a place where the devi
 
 ## Part F. Record
 
-\*\***Take a video of your prototyped interaction.**\*\*
-
-\*\***Please indicate anyone you collaborated with on this Lab.**\*\*
-Be generous in acknowledging their contributions! And also recognizing any other influences (e.g. from YouTube, Github, Twitter) that informed your design. 
-
+The video is attached to the same directory of this readme file.
 
 
 # Staging Interaction, Part 2 
