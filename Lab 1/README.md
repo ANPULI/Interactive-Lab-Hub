@@ -58,20 +58,7 @@ Try physically acting out the interaction you planned. For now, you can just pre
 
 ## Part C. Prototype the device
 
-You will be using your smartphone as a stand-in for the device you are prototyping. You will use the browser of your smart phone to act as a “light” and use a remote control interface to remotely change the light on that device. 
-
-Code for the "Tinkerbelle" tool, and instructions for setting up the server and your phone are [here](https://github.com/FAR-Lab/tinkerbelle).
-
-We invented this tool for this lab! 
-
-If you run into technical issues with this tool, you can also use a light switch, dimmer, etc. that you can can manually or remotely control.
-
-\*\***Give us feedback on Tinkerbelle.**\*\*
-
-
-![image](https://user-images.githubusercontent.com/26131764/132356262-407492f4-f736-4061-9c4d-989d21cc4975.png) | ![image](https://user-images.githubusercontent.com/26131764/132356299-27dd46a6-1ad6-46b9-b021-815635fd16c2.png) 
----------|----------
- ![image](https://user-images.githubusercontent.com/26131764/132356370-51e588a7-1574-423d-9ac4-22f3aeefca42.png) | ![image](https://user-images.githubusercontent.com/26131764/132356413-81a7ab48-d405-4de2-80b1-e703209b374f.png) 
+[Tinkerbelle](https://github.com/FAR-Lab/tinkerbelle) works pretty fine with my device (Windows 10). It only needs a little bit work to use `ipconfig` command to find the true IPV4 address.
 
 
 ## Part D. Wizard the device
@@ -82,6 +69,10 @@ Take a little time to set up the wizarding set-up that allows for someone to rem
 Now, hange the goal within the same setting, and update the interaction with the paper prototype. 
 
 \*\***Show the follow-up work here.**\*\*
+
+![image](https://user-images.githubusercontent.com/26131764/132356262-407492f4-f736-4061-9c4d-989d21cc4975.png) | ![image](https://user-images.githubusercontent.com/26131764/132356299-27dd46a6-1ad6-46b9-b021-815635fd16c2.png) 
+---------|----------
+ ![image](https://user-images.githubusercontent.com/26131764/132356370-51e588a7-1574-423d-9ac4-22f3aeefca42.png) | ![image](https://user-images.githubusercontent.com/26131764/132356413-81a7ab48-d405-4de2-80b1-e703209b374f.png) 
 
 
 ## Part E. Costume the device
@@ -107,9 +98,9 @@ This describes the second week's work for this lab activity.
 
 ## Prep (to be done before Lab on Wednesday)
 
-You will be assigned three partners from another group. Go to their github pages, view their videos, and provide them with reactions, suggestions & feedback: explain to them what you saw happening in their video. Guess the scene and the goals of the character. Ask them about anything that wasn’t clear. 
-
 \*\***Summarize feedback from your partners here.**\*\*
+
+To include more details of how this device will look like and where it will be put.
 
 ## Make it your own
 
