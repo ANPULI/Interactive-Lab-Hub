@@ -121,4 +121,4 @@ Either choice, it is easy for the user to monitor the condition in real time.
 
 ![image](https://user-images.githubusercontent.com/26131764/133172868-b00700b2-d455-4548-81ee-71dafb943136.png)
 
-[Video File](./video_v1.mp4)
+**[Video Link](https://youtu.be/jpscwhTQPr4)**
