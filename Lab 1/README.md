@@ -89,7 +89,7 @@ Think about the setting of the device: is the environment a place where the devi
 ## Part F. Record
 
 The video is attached to the same directory of this readme file.
-
+[Video File](./video_v1.mp4)
 
 # Staging Interaction, Part 2 
 
@@ -111,5 +111,14 @@ Do last week’s assignment again, but this time:
 
 \*\***Document everything here. (Particularly, we would like to see the storyboard and video, although photos of the prototype are also great.)**\*\*
 
+Three versions of device
+
+1. Employ the classic phone app as the device
+2. Stick the device to the surface of the case. 
+3. Put the device at the table of the bedroom (or the room the owner spends the most time with)
+   
+Either choice, it is easy for the user to monitor the condition in real time.
+
 ![image](https://user-images.githubusercontent.com/26131764/133172868-b00700b2-d455-4548-81ee-71dafb943136.png)
 
+[Video File](./video_v1.mp4)
