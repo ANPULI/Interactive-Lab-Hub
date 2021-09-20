@@ -194,6 +194,8 @@ After that, Git will ask you to login to your GitHub account to push the updates
 
 I use **coffee** to represent **day** and **cocktail** to represent **night**. The logic is that the first cup of coffee is taken at 8am, and the first cocktail is taken at 8pm. In the picture shown below, it is 11:10, therefore, there are three plus 1/6 cups of coffee.
 
+![c319f2d7ec93c2790b0998f1a0ae110](https://user-images.githubusercontent.com/26131764/134028522-a2ae9fa2-47ca-4cf3-b3fa-ad5947780098.jpg)
+
 ## Part G. 
 ## Sketch and brainstorm further interactions and features you would like for your clock for Part 2.
 
