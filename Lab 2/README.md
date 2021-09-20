@@ -190,11 +190,14 @@ After that, Git will ask you to login to your GitHub account to push the updates
 ## Part F. 
 ## Make a short video of your modified barebones PiClock
 
-\*\*\***Take a video of your PiClock.**\*\*\*
+> There is not a video for this demo but only a picture, because this implementation refreshes every one minute.
+
+I use **coffee** to represent **day** and **cocktail** to represent **night**. The logic is that the first cup of coffee is taken at 8am, and the first cocktail is taken at 8pm. In the picture shown below, it is 11:10, therefore, there are three plus 1/6 cups of coffee.
 
 ## Part G. 
 ## Sketch and brainstorm further interactions and features you would like for your clock for Part 2.
 
+I am thinking of drawing more animation regarding the last cup of coffee -- a more interactive progress bar, or dripping from the top. 
 
 # Prep for Part 2
 
