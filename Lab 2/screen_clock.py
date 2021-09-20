@@ -70,9 +70,7 @@ def display_drinks(image):
     else:
         image_drink = image_cocktail.copy()
         n = HOUR + 5 if HOUR < 8 else HOUR - 19
-    for i in range(n+1):
-        if i == 12:
-            break
+    for i in range(n):
         if i < 5:
             x_times, y_times = i, 0
         elif i < 9:
@@ -80,7 +78,7 @@ def display_drinks(image):
         elif i < 12:
             x_times, y_times = i - 9, 2
         x, y = x_times * CLIP_SIZE, y_times * CLIP_SIZE + 5
-        if i == n:
+        if i == n - 1:
             image_drink = image_drink.crop((0, int(CLIP_SIZE*(1 - MINUTE/60)), CLIP_SIZE, CLIP_SIZE))
             y += int(CLIP_SIZE*(1 - MINUTE/60))
         image.paste(image_drink, (x,y), image_drink)
@@ -100,7 +98,7 @@ def get_lines():
     second_line = lookup1[span]
     # third line
     lookup2 = ["ZERO", "ONE", "TWO", "THREE", "FOUR", "FIVE", "SIX", "SEVEN", "EIGHT", "NINE", "TEN", "ELEVEN", "TWELVE"]
-    if MINUTE == 0:
+    if span == 0:
         third_line =  "{} O'CLOCK".format(lookup2[HOUR])
     else:
         third_line = "{} {}".format(to_or_past, lookup2[HOUR])
