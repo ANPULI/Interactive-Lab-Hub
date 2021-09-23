@@ -56,6 +56,15 @@ x = 0
 # Some other nice fonts to try: http://www.dafont.com/bitmap.php
 font = ImageFont.truetype("/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf", 16)
 
+# set blink
+blink = False
+
+# these setup the code for our buttons and tell the pi to treat the GPIO pins as digitalIO vs analogIO
+buttonA = digitalio.DigitalInOut(board.D23)
+buttonB = digitalio.DigitalInOut(board.D24)
+buttonA.switch_to_input()
+buttonB.switch_to_input()
+
 # Turn on the backlight
 backlight = digitalio.DigitalInOut(board.D22)
 backlight.switch_to_output()
@@ -64,6 +73,7 @@ backlight.value = True
 def display_drinks(image):
     HOUR = datetime.now().hour
     MINUTE = datetime.now().minute
+    SECOND = datetime.now().second
     if 8 <= HOUR < 20:
         image_drink = image_coffee.copy()
         n = HOUR - 7
@@ -78,7 +88,7 @@ def display_drinks(image):
         elif i < 12:
             x_times, y_times = i - 9, 2
         x, y = x_times * CLIP_SIZE, y_times * CLIP_SIZE + 5
-        if i == n - 1:
+        if i == n - 1 and SECOND % 2:
             image_drink = image_drink.crop((0, int(CLIP_SIZE*(1 - MINUTE/60)), CLIP_SIZE, CLIP_SIZE))
             y += int(CLIP_SIZE*(1 - MINUTE/60))
         image.paste(image_drink, (x,y), image_drink)
@@ -103,8 +113,21 @@ def get_lines():
     else:
         third_line = "{} {}".format(to_or_past, lookup2[HOUR])
     return first_line, second_line, third_line
+
+def change_size_by_button():
+    global CLIP_SIZE
+    if buttonB.value and not buttonA.value:  # just button A pressed
+        CLIP_SIZE += 5
+    if buttonA.value and not buttonB.value:  # just button B pressed
+        CLIP_SIZE -= 5
+    if not buttonA.value and not buttonB.value:  # none pressed
+        CLIP_SIZE = 30
     
 while True:
+    blink = not blink
+    change_size_by_button()
+    image_coffee = Image.open("coffee.jpg").resize((CLIP_SIZE, CLIP_SIZE), Image.BICUBIC)
+    image_cocktail = Image.open("cocktail.png").resize((CLIP_SIZE, CLIP_SIZE), Image.BICUBIC)
     # Draw a black filled box to clear the image.
     # draw.rectangle((0, 0, width, height), outline=0, fill=0)
     image = image_bg.copy()
@@ -119,12 +142,11 @@ while True:
     y = 0
     TIME = time.strftime("%m/%d/%Y %H:%M:%S")
 
-    # draw.text((width-font.getsize("TWELVE O'CLOCK")[0], 45), "TWELVE O'CLOCK", font=font, fill="#000000")
-    first_line, second_line, third_line = get_lines()
-    draw.text((width-font.getsize(first_line)[0]-padding, 0.5*CLIP_SIZE), first_line, font=font, fill="#000000")
-    draw.text((width-font.getsize(second_line)[0]-padding, 1.5*CLIP_SIZE), second_line, font=font, fill="#000000")
-    draw.text((width-font.getsize(third_line)[0]-padding, 2.5*CLIP_SIZE), third_line, font=font, fill="#000000")
+    # first_line, second_line, third_line = get_lines()
+    # draw.text((width-font.getsize(first_line)[0]-padding, 0.5*CLIP_SIZE), first_line, font=font, fill="#000000")
+    # draw.text((width-font.getsize(second_line)[0]-padding, 1.5*CLIP_SIZE), second_line, font=font, fill="#000000")
+    # draw.text((width-font.getsize(third_line)[0]-padding, 2.5*CLIP_SIZE), third_line, font=font, fill="#000000")
     
     # Display image.
     disp.image(image, rotation)
-    time.sleep(60)
+    # time.sleep(1)
