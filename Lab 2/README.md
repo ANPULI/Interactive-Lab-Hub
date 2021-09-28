@@ -209,12 +209,8 @@ I am thinking of drawing more animation regarding the last cup of coffee -- a mo
 
 # Lab 2 Part 2
 
-Pull Interactive Lab Hub updates to your repo.
+In this version, I added more interaction to the clock. When button A is pressed, the drinks will be given a random velocity and start moving on the screen. When it approaches the boundry, the speed will be flipped.
 
-Modify the code from last week's lab to make a new visual interface for your new clock. You may [extend the Pi](Extending%20the%20Pi.md) by adding sensors or buttons, but this is not required.
+When button B is pressed, all drinks will go to the starting position.
 
-As always, make sure you document contributions and ideas from others explicitly in your writeup.
-
-You are permitted (but not required) to work in groups and share a turn in; you are expected to make equal contribution on any group work you do, and N people's group project should look like N times the work of a single person's lab. What each person did should be explicitly documented. Make sure the page for the group turn in is linked to your Interactive Lab Hub page. 
-
-
+The video can be found [**here**](https://youtu.be/xzQ_NONz17k). 
