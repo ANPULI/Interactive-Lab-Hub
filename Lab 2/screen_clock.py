@@ -5,6 +5,7 @@ import digitalio
 import board
 from PIL import Image, ImageDraw, ImageFont
 import adafruit_rgb_display.st7789 as st7789
+from PhysicalImage import PhysicalImage
 
 # Configuration for CS and DC pins (these are FeatherWing defaults on M0/M4):
 cs_pin = digitalio.DigitalInOut(board.CE0)
@@ -70,7 +71,8 @@ backlight = digitalio.DigitalInOut(board.D22)
 backlight.switch_to_output()
 backlight.value = True
 
-def display_drinks(image):
+def set_drinks():
+    drinks_list = []
     HOUR = datetime.now().hour
     MINUTE = datetime.now().minute
     SECOND = datetime.now().second
@@ -88,10 +90,17 @@ def display_drinks(image):
         elif i < 12:
             x_times, y_times = i - 9, 2
         x, y = x_times * CLIP_SIZE, y_times * CLIP_SIZE + 5
-        if i == n - 1 and SECOND % 2:
+        if i == n - 1:
             image_drink = image_drink.crop((0, int(CLIP_SIZE*(1 - MINUTE/60)), CLIP_SIZE, CLIP_SIZE))
             y += int(CLIP_SIZE*(1 - MINUTE/60))
-        image.paste(image_drink, (x,y), image_drink)
+        pi = PhysicalImage(image_drink, x, y)
+        pi.set_canvas_size(width, height)
+        drinks_list.append(pi)
+    return drinks_list
+
+def display_drinks(image, drinks_list):
+    for drink in drinks_list:
+        image.paste(drink.img, (drink.x, drink.y), drink.img)
 
 def get_lines():
     first_line = "IT IS"
@@ -122,19 +131,47 @@ def change_size_by_button():
         CLIP_SIZE -= 5
     if not buttonA.value and not buttonB.value:  # none pressed
         CLIP_SIZE = 30
+
+def press_button(drinks_list):
+    global SECOND
+    if buttonA.value and buttonB.value:
+        return drinks_list
+    if datetime.now().second - SECOND < 1:
+        return drinks_list
     
+    if buttonB.value and not buttonA.value:  # just button A pressed
+        for drink in drinks_list:
+            drink.random_speed()
+        SECOND = datetime.now().second
+    if buttonA.value and not buttonB.value:  # just button B pressed
+        drinks_list = set_drinks()
+        SECOND = datetime.now().second
+        # print(drink.vx)
+    return drinks_list
+
+HOUR = datetime.now().hour
+SECOND = datetime.now().second
+drinks_list = set_drinks()
 while True:
-    blink = not blink
-    change_size_by_button()
-    image_coffee = Image.open("coffee.jpg").resize((CLIP_SIZE, CLIP_SIZE), Image.BICUBIC)
-    image_cocktail = Image.open("cocktail.png").resize((CLIP_SIZE, CLIP_SIZE), Image.BICUBIC)
-    # Draw a black filled box to clear the image.
-    # draw.rectangle((0, 0, width, height), outline=0, fill=0)
+    if datetime.now().hour != HOUR:
+        HOUR = datetime.now().hour
+        drink_list = set_drinks()
+    drinks_list = press_button(drinks_list)
+    for drink in drinks_list:
+        drink.update()
+    # map(lambda item: item.update(), drinks_list)
+    # print(drinks_list[0].x)
     image = image_bg.copy()
-    # image.paste(image_coffee, (0,0), image_coffee)
-    # image.paste(image_drink, (0,0),image_drink)
-    display_drinks(image)
+    display_drinks(image, drinks_list)
     draw = ImageDraw.Draw(image)
+
+    # blink = not blink
+    # change_size_by_button()
+    # image_coffee = Image.open("coffee.jpg").resize((CLIP_SIZE, CLIP_SIZE), Image.BICUBIC)
+    # image_cocktail = Image.open("cocktail.png").resize((CLIP_SIZE, CLIP_SIZE), Image.BICUBIC)
+    # image = image_bg.copy()
+    # display_drinks(image)
+    # draw = ImageDraw.Draw(image)
     
 
     #TODO: Lab 2 part D work should be filled in here. You should be able to look in cli_clock.py and stats.py
@@ -142,11 +179,6 @@ while True:
     y = 0
     TIME = time.strftime("%m/%d/%Y %H:%M:%S")
 
-    # first_line, second_line, third_line = get_lines()
-    # draw.text((width-font.getsize(first_line)[0]-padding, 0.5*CLIP_SIZE), first_line, font=font, fill="#000000")
-    # draw.text((width-font.getsize(second_line)[0]-padding, 1.5*CLIP_SIZE), second_line, font=font, fill="#000000")
-    # draw.text((width-font.getsize(third_line)[0]-padding, 2.5*CLIP_SIZE), third_line, font=font, fill="#000000")
-    
     # Display image.
     disp.image(image, rotation)
     # time.sleep(1)
