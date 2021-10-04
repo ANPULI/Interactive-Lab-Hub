@@ -101,11 +101,12 @@ From a remote browser on the same network, check to make sure your webserver is 
 
 Storyboard and/or use a Verplank diagram to design a speech-enabled device. (Stuck? Make a device that talks for dogs. If that is too stupid, find an application that is better than that.) 
 
-\*\***Post your storyboard and diagram here.**\*\*
+![image](https://user-images.githubusercontent.com/26131764/135936976-126fe41d-346c-4b3e-a5a3-02f80542b507.png)
 
 Write out what you imagine the dialogue to be. Use cards, post-its, or whatever method helps you develop alternatives or group responses. 
 
-\*\***Please describe and document your process.**\*\*
+*No food*: Please refill the bowl! Your dog [dog's name] is starving!
+*With food*: Come eat [dog's name]. Followed by whistle sound.
 
 ### Acting out the dialogue
 
