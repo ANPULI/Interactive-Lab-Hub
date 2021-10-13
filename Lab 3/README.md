@@ -137,9 +137,10 @@ The system should:
 * use one or more sensors
 * require participants to speak to it. 
 
-*Document how the system works*
+The system consists of three input and output devices: the speaker, the microphone, and the camera. I deployed a webpage, which shows the real time video captures from the camera showing the dog bowl. The user can interact with the device through the microphone. The speaker can tell the user if the dog bowl is full and call the dog to eat.
 
-*Include videos or screencaptures of both the system and the controller.*
+- Video link 1: https://youtu.be/SgWZGmhyudY. This video contains the webpage view, but due to some unknown reason, the sound from the speaker of the device is very low and barely hearable.
+- Video link 2: https://youtu.be/AVon8YNsFHw. This video does not show the camera view, but the speaker sound is more clear.
 
 ## Test the system
 Try to get at least two people to interact with your system. (Ideally, you would inform them that there is a wizard _after_ the interaction, but we recognize that can be hard.)
