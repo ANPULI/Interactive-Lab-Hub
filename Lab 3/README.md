@@ -148,18 +148,22 @@ Try to get at least two people to interact with your system. (Ideally, you would
 Answer the following:
 
 ### What worked well about the system and what didn't?
-\*\**your answer here*\*\*
+
+The system does a good job in a succesful pipeline: microphone recording and understanding instructions -> camera checking the real-time image -> speaker making audio feedback.
+
+However, the whole procedure is not smooth enough. The multi-threading and inter-process communication is burdensome and takes huge computing source. The frontend-backend communication using Python is not elegant also. Next time I would try using node in pursuit of having a more smooth implementation.
 
 ### What worked well about the controller and what didn't?
 
-\*\**your answer here*\*\*
+The controller managed to receive and perceive human sound. However, it is required that people speak very loud and come near to the microphone so that the speech2text model can fully capture the sentences. In addition, the user needs to not have accent -- which is a big problem for non native speakers.
 
 ### What lessons can you take away from the WoZ interactions for designing a more autonomous version of the system?
 
-\*\**your answer here*\*\*
-
+In this system, I only left comments on the webpage on how to use this device. It will be helpful to have audio instructions when the device is activated, since we already have a speaker there. 
 
 ### How could you use your system to create a dataset of interaction? What other sensing modalities would make sense to capture?
 
-\*\**your answer here*\*\*
+Every instruction given by the user can be stored for further analysis. We would find what each person would say differently to the device to achieve the same goal. 
+
+It might be of help to add a joystick so that the user can also move the camera to see different views: what his dog is doing, etc.
 
