@@ -211,17 +211,22 @@ I use **coffee** to represent **day** and **cocktail** to represent **night**. T
 
 I am thinking of drawing more animation regarding the last cup of coffee -- a more interactive progress bar, or dripping from the top. 
 
+![image](https://user-images.githubusercontent.com/26131764/137333107-67934142-abac-4a47-ac5b-d847ceeaaa83.png)
+
 # Prep for Part 2
 
 1. Pick up remaining parts for kit on Thursday lab class. Check the updated [parts list inventory](partslist.md) and let the TA know if there is any part missing.
   
-
 2. Look at and give feedback on the Part G. for at least 2 other people in the class (and get 2 people to comment on your Part G!)
 
 # Lab 2 Part 2
+
+The comments can be summarized as more entertaining elements in the clock. I came up with ideas of rotating cups and flying cups, and decided to go for the latter.
 
 In this version, I added more interaction to the clock. When button A is pressed, the drinks will be given a random velocity and start moving on the screen. When it approaches the boundry, the speed will be flipped.
 
 When button B is pressed, all drinks will go to the starting position.
 
 The video can be found [**here**](https://youtu.be/xzQ_NONz17k). 
+
+![image](https://user-images.githubusercontent.com/26131764/137331837-b6def84c-1caa-4300-9a6f-84bce8089c95.png)
