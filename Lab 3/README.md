@@ -132,6 +132,10 @@ For Part 2, you will redesign the interaction with the speech-enabled device usi
 
 ## Prototype your system
 
+### Narrative of the dog:
+
+> I always felt so lonely when daddy and mommy were out for work until one day this device was brought home. When I get hungry or thirsty, a strange moving stick will refill the bowl for me. Though it is strange, it keeps me from starving. But the best thing is that I can hear daddy and mommy's voice! I could not find them in the house, but the sound is there, comforting me. Can't wait to see them!
+
 The system should:
 * use the Raspberry Pi 
 * use one or more sensors
@@ -142,8 +146,7 @@ The system consists of three input and output devices: the speaker, the micropho
 - Video link 1: https://youtu.be/SgWZGmhyudY. This video contains the webpage view, but due to some unknown reason, the sound from the speaker of the device is very low and barely hearable.
 - Video link 2: https://youtu.be/AVon8YNsFHw. This video does not show the camera view, but the speaker sound is more clear.
 
-Narrative of the dog:
-I always felt so lonely when daddy and mommy were out for work until one day this device was brought home. When I get hungry or thirsty, a strange moving stick will refill the bowl for me. Though it is strange, it keeps me from starving. But the best thing is that I can hear daddy and mommy's voice! I could not find them in the house, but the sound is there, comforting me. Can't wait to see them!
+
 
 ## Test the system
 Try to get at least two people to interact with your system. (Ideally, you would inform them that there is a wizard _after_ the interaction, but we recognize that can be hard.)
